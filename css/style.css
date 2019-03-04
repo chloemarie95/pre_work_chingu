@@ -1,0 +1,74 @@
+/*------- Global styling ---------*/
+
+html {
+  line-height: 1.15;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+
+header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 1.85em;
+  margin: 1em;
+}
+
+a {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+.“container“ {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+/*------ Sections ------*/
+
+ header nav.main-nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 1.5em;
+  background-color: #40596B;
+}
+
+nav.main-nav > ul > li > a{
+  margin-right: 40px;
+  color: #ffd05a;
+  transition: color .3s ease-in-out;
+  background-color: transparent;
+}
+
+
+/* Experienced issues with css selectors on Mac, asked questions but ran out of time */
+
+
+/* FLEXBOX
+justify-content (vertical): flex-start, flex-end, center, space-between, space-around
+
+align-items (horizontal): flex-start, flex-end, center, baseline, stretch
+
+flex-direction: row, row-reverse, column, column-reverse
+
+order: [int]
+
+align-self (horizontal, single item): flex-start, flex-end, center, baseline, stretch
+
+flex-wrap (items on single or dbl line): nowrap, wrap, wrap-reverse
+
+flex-flox (direction and wrap): [direction wrap]
+
+align-content (space between lines): flex-start, flex-end, center, space-between, space-around, stretch
+*/
