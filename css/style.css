@@ -5,6 +5,13 @@ html {
   font-family: Helvetica,Arial,sans-serif;
 }
 
+body {
+  padding: auto;
+  margin: auto;
+  font-weight: normal;
+  color: rgba(0,0,0,.75);
+  background-color: rgba(255, 255, 255, 0.815);
+}
 
 header, nav, section {
   display: block;
@@ -15,25 +22,30 @@ h1 {
   margin: 1em;
 }
 
+h3, h1 {
+  font-weight: normal;
+}
+
 a {
   background-color: transparent;
   cursor: pointer;
 }
 
-strong {
-  font-weight: bolder;
-}
-
-.“container“ {
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 0 auto;
   padding: 0 1rem;
   align-items: center;
   font-size: 1.25rem;
+  width: 100%;
 }
 
-/*------ Sections ------*/
+
+/*------ Section Positioning and Styles ------*/
 
  header nav.main-nav > ul {
   display: flex;
@@ -41,7 +53,7 @@ strong {
   justify-content: center;
   font-family: monospace;
   font-size: 1.5em;
-  background-color: #40596B;
+  list-style-type: none;
 }
 
 nav.main-nav > ul > li > a{
@@ -49,10 +61,47 @@ nav.main-nav > ul > li > a{
   color: #ffd05a;
   transition: color .3s ease-in-out;
   background-color: transparent;
+  text-decoration: none;
 }
 
+header, .end-footer {
+  background-color: #40596B;
+}
 
-/* Experienced issues with css selectors on Mac, asked questions but ran out of time */
+.main-style {
+  background-color: #55c0ec;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ticky-logo img {
+  max-width: 400px;
+}
+
+.add-to-slack img {
+  max-width: 40px;
+}
+
+#features {
+  background-color: #90ddaa;
+}
+
+.card img {
+  max-width: 225px;
+  margin: 4rem 0;
+}
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: stretch;
+  /* background-color: #40596B; */
+}
+
 
 
 /* FLEXBOX
