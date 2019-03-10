@@ -15,17 +15,18 @@
     <meta lang="eng">
     <title>TickyBot - Your Support Ticket Slack Bot</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <nav class="main-nav">
+            <nav class="main-nav" id="bk-top">
                 <ul>
                     <li><a href="#showcase">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#features">Features</a></li>
-                    <li><a href="#home">Add to slack</a></li>
+                    <li><a href="#add-btn">Add to slack</a></li>
                 </ul>
             </nav>
         </div>
@@ -102,7 +103,7 @@
                     <p><strong>Ticky</strong>Bot allows Slack teams to manage their support tickets 100% inside Slack,
                         without
                         having to switch between different apps.</p>
-                    <a href="#showcase" class="add-to-slack">
+                    <a href="#showcase" class="add-to-slack" id="add-btn">
                         <img src="./images/slack.svg">
                         <span>Add to <strong>Slack</strong></span>
                     </a>
@@ -120,8 +121,10 @@
         </div>
     </footer>
     <button class="back-top">
-        <img src="./images/top.svg">
-        <span class="back-top-text">Back to top</span>
+        <a href="#bk-top">
+            <img src="./images/top.svg">
+            <span class="back-top-text">Back to top</span>
+        </a>
     </button>
     <script type="text/javascript" src="./scripts/main.js"></script>
     <!-- Add script for back to top link-->
