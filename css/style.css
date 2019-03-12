@@ -4,6 +4,7 @@ html {
   line-height: 1.15;
   font-family: 'Signika', sans-serif;
   scroll-behavior: smooth;
+  font-weight: normal;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
   color: rgba(0,0,0,.75);
   background-color: rgba(255, 255, 255, 0.815);
   display: block;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 main, header, footer, nav, section {
@@ -19,17 +20,27 @@ main, header, footer, nav, section {
 }
 
 h1 {
-  font-size: 1.85em;
-  margin: 1em;
+  font-size: 3.5em;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 2em;
+  flex-basis: 100%;
+  margin-bottom: 2.3rem;
+  text-align: center;
+  position: relative;
 }
 
 strong {
   font-weight: 600;
 }
 
-h3, h1 {
+h1 {
   font-weight: normal;
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 a {
@@ -40,17 +51,25 @@ a {
 .container > * {
   margin: 0 auto;
   padding: 0 1rem;
-  font-size: 1.25rem;
   width: 100%;
+  max-width: 1200px;
+  font-size: 1.25rem;
+}
+
+code {
+  color: #DC143C;
+  font-size: 1.25rem;
+  background-color: rgba(224, 224, 224, 0.459);
+  border-radius: 2.4px;
 }
 
 
-/*------ Section Positioning and Styles ------*/
+/*------ Navigation ------*/
 
  header nav.main-nav > ul {
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1em;
   list-style-type: none;
   margin: 0;
   padding: 1rem;
@@ -72,6 +91,8 @@ header, .end-footer {
   background-color: #40596B;
 }
 
+/*--------- Home section -----------*/
+
 .main-style {
   background-color: #55c0ec;
 }
@@ -82,29 +103,31 @@ header, .end-footer {
 }
 
 .show-description {
-  margin: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .show-description p {
   color: #fafafafa;
   font-weight: 300;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .add-to-slack {
   background-color: #fafafafa;
-  /* display: flex;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; */
   max-width: 300px;
   font-size: 1.5rem;
   line-height: 1;
   border-radius: 5px;
-  padding: 1rem 2.5rem;
-}
-
-.show-img {
-  margin-right: 1rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 .ticky-logo img {
@@ -116,7 +139,10 @@ header, .end-footer {
 
 .add-to-slack img {
   max-width: 40px;
+  padding-right: 10px;
 }
+
+/*--------- About section -----------*/
 
 #features {
   background-color: #90ddaa;
@@ -124,7 +150,15 @@ header, .end-footer {
 
 .about-1 {
   display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
+
+.span-across {
+  flex-basis: 100%;
+}
+
+/*--------- Features section -----------*/
 
 .card img {
   max-width: 225px;
@@ -132,22 +166,65 @@ header, .end-footer {
 }
 
 .card {
-  /* align-items: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-self: stretch; */ 
+  align-self: stretch; 
+  justify-content: center;
+  width: 100%;
   /* background-color: #40596B; */
+}
+
+/*--------- Add section section -----------*/
+
+#add-btn {
+  color: #fafafafa;
+  background-color: #40596B;
+  text-decoration: none;
+}
+
+.span-across {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/*--------- Footer section -----------*/
+#footer-text p {
+  font-size: .8rem;
+  color: #fafafafa;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-bottom: .2rem;
+}
+
+#footer-text p a {
+  color: #fafafafa;
 }
 
 .back-top {
   float: right;
+  background-color: #ffd05a;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  bottom: 1rem;
+}
+
+.back-top-text {
+  color: #ffd05a;
+  text-decoration: none;
 }
 
 /*-------- Button animation ---------*/
 
 .hvr-grow {
-  display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
