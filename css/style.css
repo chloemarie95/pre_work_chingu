@@ -10,7 +10,7 @@ html {
 body {
   margin: auto;
   color: rgba(0,0,0,.75);
-  background-color: rgba(255, 255, 255, 0.815);
+  background-color: #fafafafa;
   display: block;
   font-weight: 200;
 }
@@ -19,18 +19,20 @@ main, header, footer, nav, section {
   display: block;
 }
 
-h1 {
-  font-size: 3.5em;
-  font-weight: 200;
+h1, h3 {
+  letter-spacing: -.15rem;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 2.5em;
   flex-basis: 100%;
   margin-bottom: 2.3rem;
   text-align: center;
-  position: relative;
+  font-weight: 300;
+  text-decoration: underline #55c0ec;
 }
+
+
 
 strong {
   font-weight: 600;
@@ -41,6 +43,9 @@ h1 {
   text-align: center;
   margin-bottom: 1rem;
   margin-top: 0;
+  font-size: 4.5em;
+  font-weight: 200;
+  color: rgba(12, 17, 20, 0.685);
 }
 
 a {
@@ -48,12 +53,15 @@ a {
   cursor: pointer;
 }
 
+/* .container {
+  display: flex;
+} */
+
 .container > * {
-  margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
   max-width: 1200px;
-  font-size: 1.25rem;
+  box-sizing: border-box;
 }
 
 code {
@@ -76,11 +84,12 @@ code {
 }
 
 nav.main-nav > ul > li > a{
-  margin-right: 40px;
+  margin-right: 20px;
   color: #ffd05a;
   transition: color .3s ease-in-out;
   background-color: transparent;
   text-decoration: none;
+  font-size: 1.25rem;
 }
 
 nav.main-nav > ul > li > a:hover {
@@ -115,10 +124,11 @@ header, .end-footer {
   font-weight: 300;
   font-size: 1.5rem;
   text-align: center;
+  width: 80%;
 }
 
 .add-to-slack {
-  background-color: #fafafafa;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,20 +155,31 @@ header, .end-footer {
 /*--------- About section -----------*/
 
 #features {
+  display: flex;
   background-color: #90ddaa;
+  flex-wrap: wrap;
 }
 
 .about-1 {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
+  flex: 0 1 100%;
+  margin-top: 2.5rem;
 }
 
 .span-across {
-  flex-basis: 100%;
+  flex-wrap: nowrap;
 }
 
 /*--------- Features section -----------*/
+
+#about .container {
+  display: flex;
+}
+
+.features-title {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
 
 .card img {
   max-width: 225px;
@@ -173,7 +194,14 @@ header, .end-footer {
   align-self: stretch; 
   justify-content: center;
   width: 100%;
-  /* background-color: #40596B; */
+  background-color: #40596B;
+  border-radius: 2px;
+  margin: 1.5rem 1rem;
+}
+
+.card-text {
+  background-color: #fafafafa;
+  padding: 0 1rem;
 }
 
 /*--------- Add section section -----------*/
@@ -182,14 +210,28 @@ header, .end-footer {
   color: #fafafafa;
   background-color: #40596B;
   text-decoration: none;
+  margin: 2rem 0;
+  display: flex;
+  align-content: center;
 }
 
-.span-across {
+#add-btn:hover {
+  background-color: rgba(46, 34, 27, 0.89); 
+}
+
+.add-slack {
+  display: block;
+  text-align: center;
+  padding: 1.75rem 0;
+  font-size: 1.2rem;
+}
+
+/* .span-across {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
+} */
 
 
 /*--------- Footer section -----------*/
@@ -200,7 +242,7 @@ header, .end-footer {
   display: block;
   text-align: center;
   padding: 0.5rem 0;
-  margin-bottom: .2rem;
+  margin: 0;
 }
 
 #footer-text p a {
@@ -208,13 +250,25 @@ header, .end-footer {
 }
 
 .back-top {
-  float: right;
   background-color: #ffd05a;
   text-decoration: none;
   border: 0;
   border-radius: 4px;
   overflow: hidden;
   bottom: 1rem;
+  margin: 10px;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  width: 40px;
+  height: 45px;
+  overflow: hidden;
+  z-index: 999;
 }
 
 .back-top-text {
@@ -222,6 +276,9 @@ header, .end-footer {
   text-decoration: none;
 }
 
+.end-footer {
+  margin: 0;
+}
 /*-------- Button animation ---------*/
 
 .hvr-grow {
@@ -240,6 +297,15 @@ header, .end-footer {
   transform: scale(1.1);
 }
 
+
+/*-------- Mobile responsive --------*/
+
+@media only screen and (max-width: 740px) {
+  main, header, footer, nav, section{
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 
 /* FLEXBOX
