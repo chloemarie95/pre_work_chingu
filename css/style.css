@@ -19,6 +19,7 @@ body {
 main, header, footer, nav, section {
   display: block;
   width: 100%;
+
 }
 
 h1, h3 {
@@ -179,7 +180,6 @@ header, .end-footer {
 #features {
   display: flex;
   background-color: #90ddaa;
-  max-width: 1400px;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -219,7 +219,7 @@ header, .end-footer {
   height: 20%;
 }
 
-/*--------- Add section section -----------*/
+/*--------- Add to slack section -----------*/
 #add-to-slack {
   display: flex;
   padding: 0 1rem;
@@ -230,7 +230,7 @@ header, .end-footer {
   background-color: #40596B;
   text-decoration: none;
   margin: 2rem 0;
-  align-content: center;
+
 }
 
 #add-btn:hover {
@@ -245,9 +245,9 @@ header, .end-footer {
   font-size: 1.2rem;
 }
 
-.add-slack p {
+/* .add-slack p {
   width: 40%;
-}
+} */
 
 /* .span-across {
   flex-basis: 100%;
@@ -329,6 +329,7 @@ header, .end-footer {
   }
   .card {
     margin-top: 0;
+    margin-bottom: 50px;
   }
   .back-top {
     margin: 20px;
