@@ -138,6 +138,7 @@ header, .end-footer {
   border-radius: 5px;
   padding: 1rem;
   width: 100%;
+  transition: 0.5s;
 }
 
 .ticky-logo img {
@@ -154,10 +155,10 @@ header, .end-footer {
 
 /*--------- About section -----------*/
 
-#features {
+#about {
   display: flex;
-  background-color: #90ddaa;
-  flex-wrap: wrap;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .about-1 {
@@ -166,24 +167,32 @@ header, .end-footer {
 }
 
 .span-across {
+  
+}
+
+#features-title {
   flex-wrap: nowrap;
 }
 
 /*--------- Features section -----------*/
 
-#about .container {
+#features {
   display: flex;
+  background-color: #90ddaa;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .features-title {
-  display: flex;
-  justify-content: center;
   padding: 2rem 0;
+  background-color: #90ddaa;
+  margin: 0;
 }
 
 .card img {
   max-width: 225px;
   margin: 4rem 0;
+  padding: 0;
 }
 
 .card {
@@ -191,17 +200,19 @@ header, .end-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  align-self: stretch; 
   justify-content: center;
   width: 100%;
   background-color: #40596B;
   border-radius: 2px;
   margin: 1.5rem 1rem;
+  flex: 1;
 }
 
 .card-text {
   background-color: #fafafafa;
   padding: 0 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.02rem;
 }
 
 /*--------- Add section section -----------*/
@@ -217,6 +228,7 @@ header, .end-footer {
 
 #add-btn:hover {
   background-color: rgba(46, 34, 27, 0.89); 
+  transition: 0.5s;
 }
 
 .add-slack {
